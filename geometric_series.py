@@ -30,29 +30,34 @@ def infinite_lease(g, r, x_0):
 
 def plot_function(axes, x_vals, func, args):
    axes.plot(x_vals, func(*args), label=func.__name__)
+   
+   
 T_max = 50
 T = np.arange(0, T_max+1)
 g = 0.02
 r = 0.03
 x_0 = 1
 our_args = (T, g, r, x_0)
-funcs = [finite_lease_pv_true,
-finite_lease_pv_approx_1,
-finite_lease_pv_approx_2]
-## the three functions we want to compare
-fig, ax = plt.subplots()
-ax.set_title('Finite Lease Present Value $T$ Periods Ahead')
-for f in funcs:
-   plot_function(ax, T, f, our_args)
-ax.legend()
-ax.set_xlabel('$T$ Periods Ahead')
-ax.set_ylabel('Present Value, $p_0$')
-plt.show()
+# funcs = [finite_lease_pv_true,
+# finite_lease_pv_approx_1,
+# finite_lease_pv_approx_2]
+# ## the three functions we want to compare
+# fig, ax = plt.subplots()
+# ax.set_title('Finite Lease Present Value $T$ Periods Ahead')
+# for f in funcs:
+#    plot_function(ax, T, f, our_args)
+# ax.legend()
+# ax.set_xlabel('$T$ Periods Ahead')
+# ax.set_ylabel('Present Value, $p_0$')
+# plt.show()
 
 
 # Convergence of infinite and finite
 T_max = 1000
 T = np.arange(0, T_max+1)
+g = 0.02
+r = 0.03
+x_0 = 1
 fig, ax = plt.subplots()
 ax.set_title('Infinite and Finite Lease Present Value $T$ Periods Ahead')
 
