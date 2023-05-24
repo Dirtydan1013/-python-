@@ -1,0 +1,36 @@
+<!-- failed2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* 導入字體 */
+
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .login-container {
+      text-align: center;
+    }
+
+    .submit-btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>註冊失敗！存在相同帳號</h1>
+    <form action="/register">
+      <input type="submit" value="回註冊頁面" class="submit-btn">
+    </form>
+
+  </div>
+</body>
+</html>

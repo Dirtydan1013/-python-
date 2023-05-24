@@ -1,0 +1,59 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0; /* 初始設為透明 */
+      transition: opacity 5s ease; /* 設定過渡效果 */
+    }
+
+    .title {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .second {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .rickroll-gif {
+      max-width: 50%;
+      max-height: 50%;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      var contentContainer = document.querySelector(".content-container");
+      contentContainer.style.opacity = 1; // 設定元素透明度為 1，以顯示元素
+    });
+  </script>
+</head>
+<body>
+  <div class="content-container">
+    <h1 class="title">Welcome to the Dashboard!</h1>
+    <h1 class="second">Enjoy your rickroll!</h1>
+    <div class="image-container">
+      <img class="rickroll-gif" src="{{ url_for('static', filename='rickroll.gif') }}" alt="Rickroll">
+    </div>
+  </div>
+</body>
+</html>

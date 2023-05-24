@@ -1,0 +1,64 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* 導入字體 */
+
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .login-container {
+      text-align: center;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      width: 120px;
+      margin-right: 10px;
+    }
+
+    .form-group input {
+      flex: 1;
+    }
+
+    .submit-btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome to Login Page</h1>
+
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <input type="submit" value="Login" class="submit-btn">
+    </form>
+
+    <p>Don't have an account? <a href="/register">Register here</a>.</p>
+  </div>
+</body>
+</html>
